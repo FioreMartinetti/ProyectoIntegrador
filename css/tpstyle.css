@@ -21,7 +21,7 @@ article.article-generos:hover h2 {
 
 header nav {
   background-color: #FFE933;
-  position: fixed;
+  position: relative;
   width: 100%;
   height: 60px;
 }
