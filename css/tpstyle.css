@@ -56,7 +56,6 @@ div ul li {
 }
 
 div ul li.logo {
-  background-image: url(https://image.flaticon.com/icons/png/512/83/83519.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 50px;
@@ -133,7 +132,11 @@ footer img{
   margin-left: 10px;
 }
 
-
+img {
+  vertical-align: middle;
+  border-style: none;
+  width: 100px;
+}
 
 
 @media screen and (max-width: 420px) {
