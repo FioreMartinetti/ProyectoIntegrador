@@ -45,7 +45,6 @@ div ul.ul-menu {
   float: right;
   overflow: hidden;
   padding-right: 15px;
-  padding-top: 8px;
 }
 div ul li {
   padding: 15px 12px 0 12px;
@@ -55,16 +54,15 @@ div ul li {
   font-size: 20px;
   height: 60px;
 }
-div ul.ul-menu {
-  margin-left:
-}
 
 div ul li.logo {
   background-image: url(https://image.flaticon.com/icons/png/512/83/83519.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 60px;
+  width: 50px;
+  height: 50px;
   margin: 7px;
+  margin-top: 8px;
 }
 
 input {
@@ -104,6 +102,8 @@ nav ul li a {
 .topnav {
   overflow: hidden;
   background-color:#FFE933;
+  position: fixed;
+  width: 100%;
 }
 
 .topnav a {
@@ -119,6 +119,17 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+
+footer {
+  color: black;
+  background-color:#FFE933;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+
 
 
 @media screen and (max-width: 420px) {
