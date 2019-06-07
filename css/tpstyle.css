@@ -122,17 +122,15 @@ nav ul li a {
 footer {
   color: black;
   background-color:#FFE933;
-  height: 60px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 footer img{
-  width:89px;
-  float: left;
-  margin-bottom: 10px;
+  width: 60px;
+}
 
-
-
+li.footer {
+  list-style-type: none;
 }
 
 img {
