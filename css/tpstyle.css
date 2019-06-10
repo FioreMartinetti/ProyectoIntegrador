@@ -84,13 +84,15 @@ article.article-generos img {
 }
 article.article-generos h2 {
   opacity: 0;
-  color: #D5D5D5;
+  color: grey;
   font-size: 30px;
   margin: 10px;
+  text-transform: uppercase;
 }
 article.article-generos p {
   max-width: 250px;
   margin-top: -40px;
+  text-transform: uppercase;
 }
 
 nav ul li a {

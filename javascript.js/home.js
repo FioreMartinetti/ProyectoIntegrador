@@ -21,12 +21,11 @@ window.addEventListener("load", function(){
      name = genero.name
      console.log(name);
    }
-
+   document.querySelector("p").innerHTML = name
+   document.querySelector("h2").innerHTML = name
   })
   .catch(function(error) {
    console.log("Error: " + error);
- })
+  })
 
 })
-
- 
