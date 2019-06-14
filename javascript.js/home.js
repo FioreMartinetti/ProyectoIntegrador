@@ -42,6 +42,7 @@ window.addEventListener("load", function(){
     }
   }
 
+<button value="Refresh Page" onClick="window.location.reload();">
 
 
 
