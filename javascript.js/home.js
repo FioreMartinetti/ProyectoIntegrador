@@ -28,4 +28,21 @@ window.addEventListener("load", function(){
    console.log("Error: " + error);
   })
 
+  document.querySelector(".buscador").onkeypress = function(evento) {
+
+    if (evento.code == "Enter") {
+      var busqueda = document.querySelector(".buscador");
+      if (busqueda.value.length >= 3) {
+        location.href = "resultados.html?buscar=" + busqueda.value
+      }
+      else {
+        alert("Llenar el campo de búsqueda. Tiene que tener al menos 3 caracteres.")
+      }
+
+    }
+  }
+
+
+
+
 })
