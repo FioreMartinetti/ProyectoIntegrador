@@ -36,14 +36,9 @@ window.addEventListener("load", function(){
         location.href = "resultados.html?buscar=" + busqueda.value
       }
       else {
-        alert("Llenar el campo de búsqueda. Tiene que tener al menos 3 caracteres.")
+        alert("El campo de búsqueda debe tener al menor 3 caracteres.")
       }
 
     }
   }
-
-<button value="Refresh Page" onClick="window.location.reload();">
-
-
-
 })
