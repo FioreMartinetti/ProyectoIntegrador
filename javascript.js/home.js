@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
   .catch(function(error) {
    console.log("Error: " + error);
   })
-
+//Validación de campo de búsqueda al hacer enter
   document.querySelector(".buscador").onkeypress = function(evento) {
 
     if (evento.code == "Enter") {
@@ -41,4 +41,11 @@ window.addEventListener("load", function(){
 
     }
   }
+//Modal
+var login = document.querySelector(".login");
+login.onclick = function() {
+}
+
+
+
 })
