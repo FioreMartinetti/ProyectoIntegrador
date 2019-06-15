@@ -120,6 +120,10 @@ nav ul li a {
   color: white;
   text-decoration: none;
 }
+.login{
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+}
 
 footer {
   color: black;

@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-
+//Conectamos nuestra API key con la API key de la página
   var api_key = "73382cd9c327a899caf9d76fe965edc2"
   var url= "https://api.themoviedb.org/3/genre/movie/list?api_key="+api_key
   fetch(url)
@@ -36,16 +36,24 @@ window.addEventListener("load", function(){
         location.href = "resultados.html?buscar=" + busqueda.value
       }
       else {
-        alert("El campo de búsqueda debe tener al menor 3 caracteres.")
+        alert("El campo de búsqueda debe tener al menos 3 caracteres.")
       }
-
     }
-  }
 //Modal
 var login = document.querySelector(".login");
 login.onclick = function() {
 }
 
+//Películas más populares
+fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=" + api_key)
+.then(function(response) {
+ return response.json()
+ })
+.then(function(respuesta) {
 
+ })
+.catch(function(error) {
+ console.log("Error: " + error);
+ })
 
-})
+}
