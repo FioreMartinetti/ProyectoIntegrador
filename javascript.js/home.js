@@ -27,7 +27,7 @@ window.addEventListener("load", function(){
   .catch(function(error) {
    console.log("Error: " + error);
   })
-//Validación de campo de búsqueda al hacer enter
+//Validación de campo de búsqueda al hacer enter(dejó de funcionar)
   document.querySelector(".buscador").onkeypress = function(evento) {
 
     if (evento.code == "Enter") {
@@ -39,24 +39,34 @@ window.addEventListener("load", function(){
         alert("El campo de búsqueda debe tener al menos 3 caracteres.")
       }
     }
-//Modal
+//Modal(incompleto)
 var login = document.querySelector(".login");
 login.onclick = function() {
 }
 
 //Películas más populares
-fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=" + api_key)
+fetch("https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=1" + api_key)
 .then(function(response) {
  return response.json()
  })
 .then(function(respuesta) {
 console.log(respuesta);
-console.log(respuesta.trending);
-var arrayDePopulares = respuesta.trending;
-
+console.log(respuesta.popular);
+var arrayDePopulares = respuesta.popular;
+var popular
+var id
+var name
+for (var i = 0; i < arrayDePopulares.length; i++) {
+  popular = arrayDePopulares[i]
+  console.log(popular);
+  id = popular.id
+  console.log(id);
+  name = popular.id
+  console.log(name);
+}
+document.querySelector("p").innerHTML = name
+document.querySelector("h2").innerHTML = name
  })
 .catch(function(error) {
  console.log("Error: " + error);
- })
-
-}
+})
