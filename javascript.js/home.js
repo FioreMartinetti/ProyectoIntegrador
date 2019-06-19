@@ -50,6 +50,9 @@ fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=" + api_key)
  return response.json()
  })
 .then(function(respuesta) {
+console.log(respuesta);
+console.log(respuesta.trending);
+var arrayDePopulares = respuesta.trending;
 
  })
 .catch(function(error) {
