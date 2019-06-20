@@ -1,7 +1,10 @@
 window.addEventListener("load", function(){
-//Conectamos nuestra API key con la API key de la página
+// El window.addEventListener ("load, function()") permite que antes se cargue la página antes de se ejecuta
+// la funcion que queremos darle.
+
   var api_key = "73382cd9c327a899caf9d76fe965edc2"
   var url= "https://api.themoviedb.org/3/genre/movie/list?api_key="+api_key
+  // Conectamos nuestra API key con la API key de la página.
   fetch(url)
   .then(function(response) {
    return response.json()
@@ -27,7 +30,7 @@ window.addEventListener("load", function(){
   .catch(function(error) {
    console.log("Error: " + error);
   })
-//Validación de campo de búsqueda al hacer enter(dejó de funcionar)
+  //
   document.querySelector(".buscador").onkeypress = function(evento) {
 
     if (evento.code == "Enter") {
@@ -39,13 +42,9 @@ window.addEventListener("load", function(){
         alert("El campo de búsqueda debe tener al menos 3 caracteres.")
       }
     }
-//Modal(incompleto)
-var login = document.querySelector(".login");
-login.onclick = function() {
-}
+  }
 
-//Películas más populares
-fetch("https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=1" + api_key)
+fetch("https://api.themoviedb.org/3/movie/popular?api_key=" + api_key)
 .then(function(response) {
  return response.json()
  })
@@ -70,3 +69,7 @@ document.querySelector("h2").innerHTML = name
 .catch(function(error) {
  console.log("Error: " + error);
 })
+//Películas más populares
+
+})
+//Modal(incompleto)
