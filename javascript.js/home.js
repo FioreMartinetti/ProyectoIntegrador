@@ -70,6 +70,4 @@ document.querySelector("h2").innerHTML = name
  console.log("Error: " + error);
 })
 //Películas más populares
-
-})
 //Modal(incompleto)
