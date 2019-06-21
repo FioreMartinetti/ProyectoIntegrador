@@ -15,7 +15,6 @@ div.texto {
   padding-top: 100px;
 }
 
-
 header nav {
   background-color: #FFE933;
   position: relative;
@@ -37,25 +36,18 @@ padding: 70px 0;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-}
-article.article-whatWeDo {
-padding: 1%;
-text-align: center;
-}
-article.article-whatWeDo img {
-padding: 5px;
-width: 100px;
-border-radius: 50%;
-}
-article.article-whatWeDo h2 {
-margin-top: -40%;
-opacity: 0;
-}
-article.article-whatWeDo p {
-max-width: 250px;
-margin-top: 40%;
+padding-right: 20px;
+padding-left: 20px;
+overflow: hidden;
 }
 
+section.section-whatWeDo2 {
+padding: 70px 0;
+flex-wrap: wrap;
+text-align: center;
+padding-left: 80px;
+overflow: hidden;
+}
 
 ul li.logo {
   color: black;
@@ -167,8 +159,10 @@ h1.headersHome {
 
 li {
   list-style-type: none;
-  padding-right: 30px;
+  padding-right: 1.5%;
   padding-top: 50px;
+  float: left;
+  text-align: center;
 }
 
 div.listaPopulares {
@@ -266,8 +260,15 @@ body,
     outline: none;
 }
 
+section.mySearch {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
 
-
+li.generos {
+  width: 300px;
+}
 
 /* MODAL MAGIC <3 */
 body.modal-active {

@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <script type="text/javascript" src= "javascript/pelisPorGenero.js">
-
-    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="css/tpstyle.css">
     <title></title>
   </head>
   <body>
+    <header>
+
+      <div class="topnav">
+            <ul>
+                <li class="animated bounceInLeft"><img class="logo" src="images/DMdb3.png" alt=""> </li>
+            </ul>
+            <ul class="ul-menu">
+
+      <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro"href="home.html">Home</a></li>
+      <li class="animated bounceInRight"><a class="color-negro" href="#favoritas">Favoritas</a></li>
+      <li class="animated bounceInRight"><a class="color-negro" href="generos.html">Géneros</a></li>
+      <li class="animated bounceInRight"> <form action="resultados.html" method="GET"> <input name="buscador" class="buscador" type="text"placeholder="Buscar..."></form></li>
+    <li class="animated bounceInRight"><div><a href="#" class="modal-opener waves-effect">Log In</a></div></li>
+
+            </ul>
+            </div>
+    </header>
+
+<section class="section-whatWeDo">
+      <ul class="ul-genero">
+    </ul>
+</section>
 
   </body>
 </html>
+
+<script type="text/javascript" src= "javascript.js/pelisPorGeneros.js"></script>

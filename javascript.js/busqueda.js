@@ -1,27 +1,39 @@
-window.addEventListener ("load",function() {
-  var queryString = new URLSearchParams(location.search)
-  var buscador = queryString.get("buscador")
+window.addEventListener("load", function(){
 
-  fetch("https://api.giphy.com/v1/gifs/search?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU&q=" + buscador +"&limit=25&offset=0&rating=G&lang=en")
-    .then(function(respuesta) {
-      return respuesta.json()
+  var urlSearchParams = new URLSearchParams(window.location.search)
+  var buscador = urlSearchParams.get('buscador')
+  console.log(buscador);
+
+  var api_key = "73382cd9c327a899caf9d76fe965edc2"
+  var url = "https://api.themoviedb.org/3/search/movie?api_key="+ api_key +"&language=en-US&query="+buscador+"&page=1&include_adult=false"
+  fetch(url)
+    .then(function(response){
+      return response.json();
     })
-    .then(function(informacion) {
-      console.log(informacion);
+    .then(function(objetoLiteralRespuesta) {
+      console.log(objetoLiteralRespuesta);
+      //GUARDO EL ARRAY DE PELIS
+      var arrayDePeliculas = objetoLiteralRespuesta.results
+      // CAPTURO EL UL
+      var ul = document.querySelector('section.mySearch ul')
 
-      var arrayDePeliculas = informacion.data
-      console.log(arrayDePeliculas);
-
+      var li = ""
+      // PARTE FIJA DE LA URL DE LA IMAGEN
+      var urlImg = "https://image.tmdb.org/t/p/original"
+      // RECORRO EL ARRAY DE PELIS
       for (var i = 0; i < arrayDePeliculas.length; i++) {
-        var id = arrayDePeliculas[i].id
-        var title = arrayDePeliculas[i].title
-        var url = arrayDePeliculas[i].images.original.url
+          li = "<li>"
+          li +="<a href='detalles.html?idPelicula="+arrayDePeliculas[i].id+"'>"
+          li +=   "<p>"+arrayDePeliculas[i].title+"</p>"
+          li +=   "<img src='"+urlImg + arrayDePeliculas[i].poster_path+"' style='width:300px;'>"
+          li +="</a>"
+          li += "</li>"
 
-        document.querySelector("div").innerHTML += "<p><a href=resultados.html?id=" + id + ">" + title + "</a></p>"
-        document.querySelector("div").innerHTML += "<img src=" + url + ">"
+          ul.innerHTML += li
       }
     })
     .catch(function(error) {
-      console.log("Error: " + error);
+      console.log("the error was: " + error);
     })
-}
+
+})

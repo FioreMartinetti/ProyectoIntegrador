@@ -8,10 +8,35 @@
     <link rel="stylesheet" href="css/tpstyle.css">
   </head>
   <body>
+    <header>
+
+      <div class="topnav">
+            <ul>
+                <li class="animated bounceInLeft"><img class="logo" src="images/DMdb3.png" alt=""> </li>
+            </ul>
+            <ul class="ul-menu">
+                <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro" href="home.html">Home</a></li>
+                <li class="animated bounceInRight"><a class="color-negro" href="#favoritas">Favoritas</a></li>
+                <li class="animated bounceInRight"><a class="color-negro" href="pelisPorGenero.html">Géneros</a></li>
+                <li class="animated bounceInRight"> <form action="resultados.html" method="GET"> <input name="buscador" class="buscador" type="text"placeholder="Buscar..."></form></li>
+                <li class="animated bounceInRight"><div><a href="#" class="modal-opener waves-effect">Log In</a></div></li>
+
+            </ul>
+            </div>
+    </header>
+    <br>
     <p>Se busco: </p>
-    <div class="">
-      <li></li>
-    </div>
+    <section class="mySearch">
+      <ul>
+
+      </ul>
+    </section>
   </body>
+  <footer>
+    <ul class="footer">
+      <ul class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
+      <ul class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
+    </ul>
+  </footer>
 </html>
 <script type="text/javascript" src="javascript.js/busqueda.js"></script>
