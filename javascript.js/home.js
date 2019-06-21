@@ -25,7 +25,7 @@ fetch("https://api.themoviedb.org/3/trending/all/day?api_key=" + api_key)
      var peliculas = informacion.results
      console.log(informacion)
 
-     for (var i = 0; i < 10 ; i++) { //informacion.results.length
+     for (var i = 0; i < 12 ; i++) { //informacion.results.length
        console.log('esto es informacion' + peliculas);
        var titulo = peliculas[i].title
        var url = 'https://image.tmdb.org/t/p/w500/'
