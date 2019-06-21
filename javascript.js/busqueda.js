@@ -1,6 +1,8 @@
+
+
 window.addEventListener ("load",function() {
-  var urlSearchParams = new URLSearchParams(window.location.search)
-  var buscador = urlSearchParams.get('buscador')
+  var urlSearchParams = new URLSearchParams(location.search)
+  var buscador = urlSearchParams.get("buscador")
   console.log(buscador);
   var api_key = "73382cd9c327a899caf9d76fe965edc2"
   var url = "https://api.themoviedb.org/3/search/movie?api_key="+ api_key +"&language=en-US&query="+ buscador +"&page=1&include_adult=false"
@@ -9,12 +11,12 @@ window.addEventListener ("load",function() {
     .then(function(response){
       return response.json();
     })
-    .then(function(objetoLiteralRespuesta) {
-      console.log(objetoLiteralRespuesta);
+    .then(function(informacion) {
+      console.log(informacion);
       //GUARDO EL ARRAY DE PELIS
-      var arrayDePeliculas = objetoLiteralRespuesta.results
+      var arrayDePeliculas = informacion.results
       // CAPTURO EL UL
-      var ul = document.querySelector('section ul')
+      var ul = document.querySelector("section ul")
 
       var li = ""
       // PARTE FIJA DE LA URL DE LA IMAGEN
@@ -22,9 +24,9 @@ window.addEventListener ("load",function() {
       // RECORRO EL ARRAY DE PELIS
       for (var i = 0; i < arrayDePeliculas.length; i++) {
           li = "<li>"
-          li +="<a href='detalles.html?idPelicula="+arrayDePeliculas[i].id+"'>"
-          li += "<p>"+arrayDePeliculas[i].title+"</p>"
-          li += "<img src='"+urlImg + arrayDePeliculas[i].poster_path+"' style='width:300px;'>"
+          li += "<a href='detalles.html?idPelicula=" + arrayDePeliculas[i].id + "'>"
+          li += "<p>" + arrayDePeliculas[i].title + "</p>"
+          li += "<img src='" + urlImg + arrayDePeliculas[i].poster_path + "'style='width:300px;'>"
           li += "</a>"
           li += "</li>"
 
