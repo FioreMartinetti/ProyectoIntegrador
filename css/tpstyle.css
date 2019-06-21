@@ -29,6 +29,7 @@ div {
 
 button.button-main {
 margin-bottom: 10%;
+
 }
 
 section.section-whatWeDo {
@@ -188,4 +189,12 @@ button.estrellita {
 
 button.estrellita:hover {
   color: white;
+}
+
+h1 {
+  color: white;
+}
+
+h1:hover {
+  color: #FFE933;
 }

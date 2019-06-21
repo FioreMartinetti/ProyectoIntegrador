@@ -24,25 +24,23 @@ var url= "https://api.themoviedb.org/3/genre/movie/list?api_key=" + api_key
      console.log(id);
      name = genero.name
      console.log(name);
+
+     var li;
+     li = '<li>'
+     li += '<div"><h1>' + name + '</h1></div>'
+     li += '</li>'
+
+
+    console.log(li);
+
+    document.querySelector("#generos").innerHTML += li
    }
-   genero.innerHTML
   })
   .catch(function(error) {
    console.log("Error: " + error);
   })
-  //Validación campo de busqueda al hacer enter
-  document.querySelector(".buscador").onkeypress = function(evento) {
 
-    if (evento.code == "Enter") {
-      var busqueda = document.querySelector(".buscador");
-      if (busqueda.value.length >= 3) {
-        location.href = "resultados.html?buscar=" + busqueda.value
-      }
-      else {
-        alert("El campo de búsqueda debe tener al menos 3 caracteres.")
-      }
-    }
-  }
+
 
   //Validación del campo de búsqueda al hacer enter
   document.querySelector(".buscador").onkeypress = function(evento) {

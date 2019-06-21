@@ -16,7 +16,7 @@ window.addEventListener("load",  function(){
     }
   }
 
-//API DE LA PELICULAS POPULARES
+// API DE LA PELICULAS POPULARES
 fetch("https://api.themoviedb.org/3/trending/all/day?api_key=" + api_key)
     .then(function(respuesta) {
      return respuesta.json()
@@ -89,7 +89,7 @@ fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_key + "&lang
  })
 
 
-
+// COMING SOON
  fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=" + api_key + "&language=en-US&page=1")
      .then(function(respuesta) {
       return respuesta.json()
