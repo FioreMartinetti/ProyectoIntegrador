@@ -1,36 +1,7 @@
-window.addEventListener("load", function(){
-// El window.addEventListener ("load, function()") permite que la página se cargue antes de se ejecuta
-// la funcion que queremos darle.
+window.addEventListener("load",  function(){
 
   var api_key = "73382cd9c327a899caf9d76fe965edc2"
-  var url= "https://api.themoviedb.org/3/genre/movie/list?api_key="+api_key
-  // Conectamos nuestra API key con la API key de la página.
-  fetch(url)
-  .then(function(response) {
-   return response.json()
-  })
-  .then(function(respuesta) {
-   console.log(respuesta)
-   ; //imprimo todo lo que me devuelve el servidor
-   console.log(respuesta.genres); //imprimo el array data, que contiene 25 elementos
-   var arrayDeGeneros = respuesta.genres;
-   var genero
-   var id
-   var name
-   for (var i = 0; i < arrayDeGeneros.length; i++) {
-     genero = arrayDeGeneros[i]
-     console.log(genero);
-     id = genero.id
-     console.log(id);
-     name = genero.name
-     console.log(name);
-   }
-   document.querySelector("p").innerHTML = name
-   document.querySelector("h2").innerHTML = name
-  })
-  .catch(function(error) {
-   console.log("Error: " + error);
-  })
+
   //Validación campo de busqueda al hacer enter
   document.querySelector(".buscador").onkeypress = function(evento) {
 
@@ -45,88 +16,142 @@ window.addEventListener("load", function(){
     }
   }
 
-fetch("https://api.themoviedb.org/3/movie/popular?api_key=" + api_key)
-.then(function(response) {
- return response.json()
+//API DE LA PELICULAS POPULARES
+fetch("https://api.themoviedb.org/3/trending/all/day?api_key=" + api_key)
+    .then(function(respuesta) {
+     return respuesta.json()
+   })
+    .then(function(informacion) {
+     var peliculas = informacion.results
+     console.log(informacion)
+
+     for (var i = 0; i < 10 ; i++) { //informacion.results.length
+       console.log('esto es informacion' + peliculas);
+       var titulo = peliculas[i].title
+       var url = 'https://image.tmdb.org/t/p/w500/'
+       var img =  peliculas[i].poster_path;
+       var id = peliculas[i].id
+
+      var li;
+      li = '<li>'
+      li += "<button class='estrellita'> &#9733; </button>"
+      li += "<a href='../5-Detalle de una pelicula/detallePeli.html?idDePeli="+id+"'>"
+      li += '<img src=' + url + img + '>'
+      li += '<div class="uk-position-center uk-panel divPelis"><h1 class="headersHome">' + titulo + '</h1></div>'
+      li += "</a>"
+      li += '</li>'
+
+      console.log(li);
+
+      document.querySelector("#listaPopulares").innerHTML += li
+     }
+    })
+
+ .catch(function(error) {
+   console.log("error "+ error)
  })
-.then(function(respuesta) {
-  var pelis = respuesta.results;
-console.log(respuesta);
 
-for (var i = 0; i < 4; i++) {
-  respuesta.results.length
-  console.log("respuesta" + pelis)
-  var titulo = pelis[i].title
-  var url = "https://image.tmdb.org/t/p/w500/"
-  var img = pelis[i].poster_path
-  var id = pelis[i].id
 
- var li;
- li = '<li>'
- li += "<button class='estrellita'> </button>
+
+
+// TOP RATED MOVIES
+fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_key + "&language=en-US&page=1")
+    .then(function(respuesta) {
+     return respuesta.json()
+   })
+    .then(function(informacion) {
+     var peliculas = informacion.results
+     console.log(informacion)
+
+     for (var i = 0; i < 10 ; i++) { //informacion.results.length
+       console.log('esto es informacion' + peliculas);
+       var titulo = peliculas[i].title
+       var url = 'https://image.tmdb.org/t/p/w500/'
+       var img =  peliculas[i].poster_path;
+       var id = peliculas[i].id
+
+      var li;
+      li = '<li>'
+      li += "<button class='estrellita'> &#9733; </button>"
+      li += "<a href='../5-Detalle de una pelicula/detallePeli.html?idDePeli="+id+"'>"
+      li += '<img src=' + url + img + '>'
+      li += ' <div class="uk-position-center uk-panel divPelis"><h1 class="headersHome">' + titulo + '</h1></div>'
+      li += '</li>'
+
+      console.log(li);
+
+      document.querySelector("#topRated").innerHTML += li
+     }
+    })
+
+ .catch(function(error) {
+   console.log("error "+ error)
+ })
+
+
+
+ fetch("https://api.themoviedb.org/3/movie/upcoming?api_key=" + api_key + "&language=en-US&page=1")
+     .then(function(respuesta) {
+      return respuesta.json()
+    })
+     .then(function(informacion) {
+      var peliculas = informacion.results
+      console.log(informacion)
+
+      for (var i = 0; i < 10 ; i++) { //informacion.results.length
+        console.log('esto es informacion' + peliculas);
+        var titulo = peliculas[i].title
+        var url = 'https://image.tmdb.org/t/p/w500/'
+        var img =  peliculas[i].poster_path;
+        var id = peliculas[i].id
+
+       var li;
+       li = '<li>'
+       li += "<button onclick='agregarFavoritos("+id+")' class='estrellita'> &#9733; </button>"
+       li += "<a href='../5-Detalle de una pelicula/detallePeli.html?idDePeli="+id+"'>"
+       li += '<img src=' + url + img + '>'
+       li += '<div class="uk-position-center uk-panel divPelis"><h1 class= "headersHome">' + titulo + '</h1></div>'
+       li += '</li>'
+
+       console.log(li);
+
+       document.querySelector("#comingSoon").innerHTML += li
+      }
+
+
+     })
 
   .catch(function(error) {
-    console.log("error" + error)
+    console.log("error "+ error)
   })
-
-}
-document.querySelector("p").innerHTML = name
-document.querySelector("h2").innerHTML = name
- })
-.catch(function(error) {
- console.log("Error: " + error);
 })
-//Películas populares
 
-fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_key)
-.then(function(response) {
- return response.json()
- })
-.then(function(respuesta) {
-console.log(respuesta);
-console.log(respuesta.destacada);
-var arrayDeDestacadas = respuesta.destacada;
-var destacada
-var id
-var name
-for (var i = 0; i < arrayDeDestacadas.length; i++) {
-  popular = arrayDeDestacadas[i]
-  console.log(popular);
-  id = popular.id
+
+
+
+// CUANDO INGRESO; DEBO INICIALIZAR EL ARRAY DONDE VOY A GUARDAR LAS PELIS FAVORITAS
+var arrayDePelisFavoritas = []
+
+
+function agregarFavoritos(id) {
+  alert("The selected movie has been saved in your favorite movies")
+  // PRIMERO, reviso si hay alguna peli FAVORITA (en el array)
+  if (arrayDePelisFavoritas.indexOf(id)===-1) {
+      // EN ESTE CASO NO ES FAVORITA
+      // pusheo el id dentro del array
+      arrayDePelisFavoritas.push(id)
+      // guardo en session el array, como es un objeto debo transformarlo a STRING
+      window.sessionStorage.setItem("favorita",JSON.stringify(arrayDePelisFavoritas))
+  } else {
+    // ESTA PELI YA ES FAVORITA
+    console.log(arrayDePelisFavoritas.indexOf(id));
+    // la saco del array
+    arrayDePelisFavoritas.splice(arrayDePelisFavoritas.indexOf(id),1)
+    console.log(arrayDePelisFavoritas);
+    // reemplazo el array que tenia la peli como favorita, por el array que ya no la tiene
+    window.sessionStorage.setItem("favorita",JSON.stringify(arrayDePelisFavoritas))
+  }
+
   console.log(id);
-  name = popular.id
-  console.log(name);
+  console.log(JSON.parse(window.sessionStorage.getItem("favorita")));
 }
-document.querySelector("p").innerHTML = name
-document.querySelector("h2").innerHTML = name
- })
-.catch(function(error) {
- console.log("Error: " + error);
-})
-//Películas destacadas
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
