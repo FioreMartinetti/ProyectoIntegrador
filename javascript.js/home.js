@@ -1,7 +1,7 @@
 // window.addEventListener ("load, function()") permite que la página se cargue antes de que se ejecuta
 // la funcion que queremos darle.
 window.addEventListener("load", function(){
-
+var api_key = "73382cd9c327a899caf9d76fe965edc2"
   //Validación campo de busqueda al hacer enter
   document.querySelector(".buscador").onkeypress = function(evento) {
 
@@ -16,7 +16,6 @@ window.addEventListener("load", function(){
     }
   }
 // Listado de géneros
-  var api_key = "73382cd9c327a899caf9d76fe965edc2"
   var url= "https://api.themoviedb.org/3/genre/movie/list?api_key="+ api_key
   fetch(url)
   .then(function(response) {
@@ -103,7 +102,26 @@ console.log(respuesta);
  console.log("Error: " + error);
 })
 
+//Carrousel
+var slideIndex = [1,1];
+var slideId = ["mySlides1"]
+showSlides(1, 0);
+showSlides(1, 1);
 
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
 
 
 
