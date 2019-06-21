@@ -2,13 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/tpstyle.css">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="css/tpstyle.css">
 
+<<<<<<< HEAD
     <script type="text/javascript" src="javascript.js/home.js"></script>
+=======
+>>>>>>> master
 
     <title>DMdb</title>
   </head>
@@ -18,20 +20,23 @@
 
       <div class="topnav">
             <ul>
-                <li class="animated bounceInLeft"><img src="images/DMdb3.png" alt=""> </li>
+                <li class="animated bounceInLeft"><img class="logo" src="images/DMdb3.png" alt=""> </li>
             </ul>
             <ul class="ul-menu">
                 <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro" href="#home">Home</a></li>
-                <li class="animated bounceInRight"><a class="color-negro" href="#destacada">Destacada</a></li>
                 <li class="animated bounceInRight"><a class="color-negro" href="#favoritas">Favoritas</a></li>
-                <li class="animated bounceInRight"><a class="color-negro" href="generos.html">Generos</a></li>
-                <li class="animated bounceInRight"> <input class="buscador" type="text"placeholder="Buscar..."> </li>
-                <li class="animated bounceInRight"><button type="submit"id="botonLogin">Login</button></li>
+                <li class="animated bounceInRight"><a class="color-negro" href="generos.html">Géneros</a></li>
+                <li class="animated bounceInRight"> <form action="resultados.html" method="GET"> <input class="buscador" type="text"placeholder="Buscar..."> <input class="boton" type="submit" name="" value="ENVIAR"></form></li>
+                <li class="animated bounceInRight"><div><a href="#" class="modal-opener waves-effect">Log In</a></div></li>
+
             </ul>
             </div>
     </header>
 
+
+
     <main>
+<<<<<<< HEAD
       <div class="slideshow-container">
           <div class="mySlides1">
            <img src="" style="width:600px;height:250px;">
@@ -104,15 +109,40 @@
 
                 </div>
           </section>
+=======
+
+    <section id="listaPopulares" class="section-whatWeDo">
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+    </section>
+>>>>>>> master
 
     </main>
 
   </body>
   <footer>
     <ul class="footer">
-      <li class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
-      <li class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
+      <ul class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
+      <ul class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
     </ul>
   </footer>
 
 </html>
+<script type="text/javascript"src="javascript.js/busqueda.js"></script>
+<script type="text/javascript" src="javascript.js/home.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>

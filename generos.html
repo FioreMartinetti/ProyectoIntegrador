@@ -2,61 +2,54 @@
 <html lang="en" dir="ltr">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/tpstyle.css">
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="css/tpstyle.css">
-  <link rel="stylesheet" href="css/tpstyle2.css">
-  <script type="text/javascript" src="javascript.js/generos.js">
-  </script>
-  <title>DMdb</title>
+
+  <title>DMdb - Géneros</title>
 </head>
   <body style="font-family:Russo One">
     <header>
 
       <div class="topnav">
             <ul>
-                <li class="animated bounceInLeft"><img src="images/DMdb3.png" alt=""></li>
+                <li class="animated bounceInLeft"><img src="images/DMdb3.png" class="logo" alt=""></li>
             </ul>
             <ul class="ul-menu">
                 <li class="animated bounceInRight"><a class="color-negro" href="home.html"> Home </a></li>
-                <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro" href="generos.html"> Generos </a></li>
-                <li class="animated bounceInRight"> <input class="buscador" type="search" placeholder="Buscar..."> </li>
-                <li class="animated bounceInRight"><button type="submit"id="botonLogin">Login</button></li>
+                <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro" href="generos.html"> Géneros </a></li>
+                <li class="animated bounceInRight"> <input class="buscador" type="text"placeholder="Buscar..."> </li>
+                <li class="animated bounceInRight"><div><a href="#" class="modal-opener waves-effect">Log In</a></div></li>
             </ul>
     </header>
+
     <main>
-      <section id="generos" class="section-generos">
-          <article class="article-generos">
-              <img src="images/dmdb3.png" alt="icon image">
-              <h2 class="animated infinite pulse">TERROR</h2>
-              <p class="animated infinite pulse">Descripción...</p>
-          </article>
-          <article class="article-generos">
-              <img src="images/dmdb3.png" alt="icon image">
-              <h2 class="animated infinite pulse">COMEDIA</h2>
-              <p class="animated infinite pulse">Descripción...</p>
-          </article>
-          <article class="article-generos">
-              <img src="images/dmdb3.png" alt="icon image">
-              <h2 class="animated infinite pulse">DRAMÁTICAS</h2>
-              <p class="animated infinite pulse">Descripción...</p>
-          </article>
-          <article class="article-generos">
-              <img src="images/dmdb3.png" alt="icon image">
-              <h2 class="animated infinite pulse">AVENTURA</h2>
-              <p class="animated infinite pulse">Descripción...</p>
-          </article>
-        </section>
+
+    <section id="generos" class="section-whatWeDo">
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+        <article class="article-listaPopulares">
+        </article>
+
+    </section>
+
+    </main>
+
   </body>
   <footer>
     <ul class="footer">
-      <li class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
-      <li class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
+      <ul class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
+      <ul class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
     </ul>
   </footer>
 </html>
-
-<script type="text/javascript" src="javascript.js/home.js">
-</script>
+<script type="text/javascript"src="javascript.js/generos.js"></script>
+<script type="text/javascript" src="javascript.js/home.js"></script>
