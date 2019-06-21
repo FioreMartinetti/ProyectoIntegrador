@@ -137,6 +137,7 @@ footer {
   background-color:#FFE933;
   text-align: center;
   padding-top: 5px;
+  display: block;
 }
 footer img{
   width: 60px;
@@ -197,4 +198,16 @@ h1 {
 
 h1:hover {
   color: #FFE933;
+}
+
+button#loginBoton {
+  background: black;
+  border-color: inherit;
+  color: #FFE933;
+}
+
+button#loginBoton:hover {
+  background: white;
+  color: black;
+  border-color: white;
 }
