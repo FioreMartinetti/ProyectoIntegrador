@@ -3,11 +3,11 @@
 *{box-sizing: border-box;}
 
 body {
-  text-align: justify;
   background-color: black;
   color: white;
   margin: none;
   font-family: 'Russo One', sans-serif;
+  text-align: center;
 }
 
 div.texto {
@@ -24,7 +24,43 @@ header nav {
 }
 div {
   overflow: hidden;
+  list-style-type: none;
 }
+
+button.button-main {
+margin-bottom: 10%;
+}
+
+section.section-whatWeDo {
+padding: 70px 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+article.article-whatWeDo {
+padding: 1%;
+text-align: center;
+}
+article.article-whatWeDo img {
+padding: 5px;
+width: 100px;
+border-radius: 50%;
+}
+article.article-whatWeDo h2 {
+margin-top: -40%;
+opacity: 0;
+}
+article.article-whatWeDo p {
+max-width: 250px;
+margin-top: 40%;
+}
+
+
+---------
+
+
+
+
 
 ul li.logo {
   color: black;
@@ -112,5 +148,44 @@ ul.footer {
 img {
   vertical-align: middle;
   border-style: none;
+  width: 300px;
+}
+
+img.logo {
   width: 100px;
+}
+
+h1.headersHome {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  padding-right: 30px;
+  padding-top: 50px;
+}
+
+div.listaPopulares {
+  text-decoration: none;
+  text-emphasis-style: none;
+}
+
+a {
+  color: #FFE933;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+button.estrellita {
+  text-align: center;
+  color: #FFE933;
+  background: none;
+  margin-right: 10px;
+}
+
+button.estrellita:hover {
+  color: white;
 }
