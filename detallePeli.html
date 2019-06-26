@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="css/tpstyle.css">
     <title>Detalles</title>
   </head>
   <body>
-    <section class="detallePelis">
-        <ul>
 
+    <header>
+
+      <div class="topnav">
+            <ul>
+                <li class="animated bounceInLeft"><img class="logo" src="images/DMdb3.png" alt=""> </li>
+            </ul>
+            <ul class="ul-menu">
+                <li class="animated bounceInRight"><a onClick="window.location.reload()" class="color-negro" href="#home">Home</a></li>
+                <li class="animated bounceInRight"><a class="color-negro" href="#favoritas">Favoritas</a></li>
+                <li class="animated bounceInRight"><a class="color-negro" href="generos.html">Géneros</a></li>
+                <li class="animated bounceInRight"> <form action="resultados.html" method="GET"> <input name="buscador" class="buscador" type="text"placeholder="Buscar..."></form></li>
+                <li class="animated bounceInRight"><div><a href="#" class="modal-opener waves-effect">Log In</a></div></li>
+
+            </ul>
+            </div>
+    </header>
+
+    <section>
+      <aside class="posterPelicula">
+        </aside>
+      <h2 class="titulos"></h2>
+      <div class="genero">
+        <p>This movie belongs to the following genres:</p>
+      </div>
+        <div class= detalles>
+        </div>
+
+      <div class="lenguajes">
+        <h2>Available languages</h2>
+        <ul>
         </ul>
-    </section>
+      </div>
+
+      <div class="sinopsis">
+        <h2>Overview</h2>
+        <p>
+        </p>
+      </div>
+
+      <div class="fechaEstreno">
+        <h2>Release date: <span></span></h2>
+
+      </div>
+
+
+      </div>
+
+      <div class="trailer">
+        <button class="uk-button uk-button-default uk-margin uk-button-secondary" type="button" uk-toggle="target: +">Watch trailer</button>
+        <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls playsinline hidden uk-video></iframe>
+
+      </div>
+      </section>
   </body>
+  <footer>
+    <ul class="footer">
+      <ul class="animated bounceInUp"><img src="images/TMDBLogo.png" alt=""></li>
+      <ul class="animated bounceInUp">Max Candelarezi & Fiorella Martinetti</li>
+    </ul>
+  </footer>
 </html>
-<script type="text/javascript" src="detalles.js"></script>
+<script type="text/javascript" src="javascript.js/detalle.js"></script>

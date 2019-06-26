@@ -15,6 +15,10 @@ div.texto {
   padding-top: 100px;
 }
 
+div.detalles {
+  text-align: center;
+}
+
 header nav {
   background-color: #FFE933;
   position: relative;
@@ -24,6 +28,23 @@ header nav {
 div {
   overflow: hidden;
   list-style-type: none;
+  text-align: left;
+}
+
+div.trailer {
+  padding-bottom: 30px;
+}
+
+div.lenguajes {
+  padding-bottom: 20px;
+}
+
+div.sinopsis {
+  padding-bottom: 20px;
+}
+
+aside.posterPelicula {
+  margin-top: 155px;
 }
 
 button.button-main {
